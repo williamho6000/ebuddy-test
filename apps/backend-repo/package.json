@@ -1,0 +1,25 @@
+{
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/core/app.js",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "FUNCTIONS_EMULATOR=true tsc && firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}

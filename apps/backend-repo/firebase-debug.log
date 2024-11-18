@@ -1,0 +1,1323 @@
+[debug] [2024-11-15T09:58:17.928Z] ----------------------------------------------------------------------
+[debug] [2024-11-15T09:58:17.929Z] Command:       /root/.nvm/versions/node/v18.17.0/bin/node /root/.nvm/versions/node/v18.17.0/bin/firebase emulators:start --only functions --debug
+[debug] [2024-11-15T09:58:17.929Z] CLI Version:   13.25.0
+[debug] [2024-11-15T09:58:17.929Z] Platform:      linux
+[debug] [2024-11-15T09:58:17.930Z] Node Version:  v18.17.0
+[debug] [2024-11-15T09:58:17.930Z] Time:          Fri Nov 15 2024 16:58:17 GMT+0700 (Indochina Time)
+[debug] [2024-11-15T09:58:17.930Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-15T09:58:18.000Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-15T09:58:18.001Z] > authorizing via signed-in user (williamho6000@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-11-15T09:58:18.005Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-11-15T09:58:18.011Z] [hub] writing locator at /tmp/hub-ebudy-test1.json
+[debug] [2024-11-15T09:58:18.020Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2024-11-15T09:58:18.023Z] defaultcredentials: writing to file /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json
+[debug] [2024-11-15T09:58:18.032Z] Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json"}}
+[debug] [2024-11-15T09:58:18.033Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T09:58:18.033Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T09:58:18.034Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig [none]
+[debug] [2024-11-15T09:58:18.417Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig 200
+[debug] [2024-11-15T09:58:18.418Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig {"projectId":"ebudy-test1","storageBucket":"ebudy-test1.firebasestorage.app"}
+[debug] [2024-11-15T09:58:18.434Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-11-15T09:58:18.435Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-11-15T09:58:18.435Z] Starting Emulator UI with command {"binary":"node","args":["/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false,"port":4000} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false,\"port\":4000}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-11-15T09:58:18.540Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[info] i  functions: Watching "/root/Projects/ebuddy-monorepo/apps/backend-repo" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/root/Projects/ebuddy-monorepo/apps/backend-repo\" for Cloud Functions..."}}
+[debug] [2024-11-15T09:58:18.693Z] Validating nodejs source
+[debug] [2024-11-15T09:58:19.226Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "core/app.ts",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "FUNCTIONS_EMULATOR=true firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
+[debug] [2024-11-15T09:58:19.229Z] Building nodejs source
+[debug] [2024-11-15T09:58:19.229Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T09:58:19.232Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T09:58:19.234Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[info] Serving at port 8061
+
+[error] /root/Projects/ebuddy-monorepo/apps/backend-repo/core/app.ts:1
+import { authMiddleware } from "../middleware/authMiddleware";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at loadModule (/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+
+[debug] [2024-11-15T09:58:19.389Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-11-15T09:58:19.416Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-11-15T09:58:50.769Z] File /root/Projects/ebuddy-monorepo/apps/backend-repo/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /root/Projects/ebuddy-monorepo/apps/backend-repo/package.json changed, reloading triggers"}}
+[debug] [2024-11-15T09:58:51.770Z] Validating nodejs source
+[debug] [2024-11-15T09:58:52.296Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "core/app.ts",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "ts-node FUNCTIONS_EMULATOR=true firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
+[debug] [2024-11-15T09:58:52.299Z] Building nodejs source
+[debug] [2024-11-15T09:58:52.299Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T09:58:52.300Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T09:58:52.304Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[info] Serving at port 8767
+
+[error] /root/Projects/ebuddy-monorepo/apps/backend-repo/core/app.ts:1
+import { authMiddleware } from "../middleware/authMiddleware";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at loadModule (/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+
+[debug] [2024-11-15T09:58:52.455Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-11-15T09:58:52.488Z] Received signal SIGINT (Ctrl-C) 1
+[info]  
+[info] i  emulators: Received SIGINT (Ctrl-C) for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGINT (Ctrl-C) signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  ui: Stopping Emulator UI {"metadata":{"emulator":{"name":"ui"},"message":"Stopping Emulator UI"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[warn] ⚠  Emulator UI has exited upon receiving signal: SIGINT 
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  eventarc: Stopping Eventarc Emulator {"metadata":{"emulator":{"name":"eventarc"},"message":"Stopping Eventarc Emulator"}}
+[info] i  tasks: Stopping Cloud Tasks Emulator {"metadata":{"emulator":{"name":"tasks"},"message":"Stopping Cloud Tasks Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[info] i  logging: Stopping Logging Emulator {"metadata":{"emulator":{"name":"logging"},"message":"Stopping Logging Emulator"}}
+[debug] [2024-11-15T09:58:52.496Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[debug] [2024-11-15T09:59:33.039Z] ----------------------------------------------------------------------
+[debug] [2024-11-15T09:59:33.041Z] Command:       /root/.nvm/versions/node/v18.17.0/bin/node /root/.nvm/versions/node/v18.17.0/bin/firebase emulators:start --only functions --debug
+[debug] [2024-11-15T09:59:33.041Z] CLI Version:   13.25.0
+[debug] [2024-11-15T09:59:33.041Z] Platform:      linux
+[debug] [2024-11-15T09:59:33.041Z] Node Version:  v18.17.0
+[debug] [2024-11-15T09:59:33.042Z] Time:          Fri Nov 15 2024 16:59:33 GMT+0700 (Indochina Time)
+[debug] [2024-11-15T09:59:33.042Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-15T09:59:33.111Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-15T09:59:33.112Z] > authorizing via signed-in user (williamho6000@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-11-15T09:59:33.116Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-11-15T09:59:33.120Z] [hub] writing locator at /tmp/hub-ebudy-test1.json
+[debug] [2024-11-15T09:59:33.126Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2024-11-15T09:59:33.129Z] defaultcredentials: writing to file /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json
+[debug] [2024-11-15T09:59:33.158Z] Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json"}}
+[debug] [2024-11-15T09:59:33.159Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T09:59:33.159Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T09:59:33.160Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig [none]
+[debug] [2024-11-15T09:59:33.501Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig 200
+[debug] [2024-11-15T09:59:33.502Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig {"projectId":"ebudy-test1","storageBucket":"ebudy-test1.firebasestorage.app"}
+[debug] [2024-11-15T09:59:33.541Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-11-15T09:59:33.542Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-11-15T09:59:33.542Z] Starting Emulator UI with command {"binary":"node","args":["/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false,"port":4000} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false,\"port\":4000}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-11-15T09:59:33.649Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[info] i  functions: Watching "/root/Projects/ebuddy-monorepo/apps/backend-repo" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/root/Projects/ebuddy-monorepo/apps/backend-repo\" for Cloud Functions..."}}
+[debug] [2024-11-15T09:59:33.808Z] Validating nodejs source
+[debug] [2024-11-15T09:59:34.331Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "core/app.ts",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "FUNCTIONS_EMULATOR=true firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
+[debug] [2024-11-15T09:59:34.334Z] Building nodejs source
+[debug] [2024-11-15T09:59:34.334Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T09:59:34.337Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T09:59:34.340Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[info] Serving at port 8245
+
+[error] /root/Projects/ebuddy-monorepo/apps/backend-repo/core/app.ts:1
+import { authMiddleware } from "../middleware/authMiddleware";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at loadModule (/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+
+[debug] [2024-11-15T09:59:34.495Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-11-15T09:59:34.527Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-11-15T10:00:15.714Z] File /root/Projects/ebuddy-monorepo/apps/backend-repo/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /root/Projects/ebuddy-monorepo/apps/backend-repo/package.json changed, reloading triggers"}}
+[debug] [2024-11-15T10:00:16.715Z] Validating nodejs source
+[debug] [2024-11-15T10:00:16.966Z] checkFunctionsSDKVersion encountered error: Unexpected end of JSON input {}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: There was an error reading /package.json:
+
+ Trailing comma in object at 26:1
+}
+^
+File: "/root/Projects/ebuddy-monorepo/apps/backend-repo/package.json" {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: There was an error reading /package.json:\n\n Trailing comma in object at 26:1\n}\n^\nFile: \"/root/Projects/ebuddy-monorepo/apps/backend-repo/package.json\""}}
+[debug] [2024-11-15T10:00:17.988Z] File /root/Projects/ebuddy-monorepo/apps/backend-repo/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /root/Projects/ebuddy-monorepo/apps/backend-repo/package.json changed, reloading triggers"}}
+[debug] [2024-11-15T10:00:18.989Z] Validating nodejs source
+[debug] [2024-11-15T10:00:19.501Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "core/app.ts",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "FUNCTIONS_EMULATOR=true firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  },
+  "type": "module"
+}
+[debug] [2024-11-15T10:00:19.503Z] Building nodejs source
+[debug] [2024-11-15T10:00:19.504Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T10:00:19.505Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T10:00:19.507Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[info] Serving at port 8121
+
+[error] /root/Projects/ebuddy-monorepo/apps/backend-repo/core/app.ts:1
+import { authMiddleware } from "../middleware/authMiddleware";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at loadModule (/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+
+[debug] [2024-11-15T10:00:19.658Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-11-15T10:00:20.773Z] Received signal SIGINT (Ctrl-C) 1
+[info]  
+[info] i  emulators: Received SIGINT (Ctrl-C) for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGINT (Ctrl-C) signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  ui: Stopping Emulator UI {"metadata":{"emulator":{"name":"ui"},"message":"Stopping Emulator UI"}}
+[warn] ⚠  Emulator UI has exited upon receiving signal: SIGINT 
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  eventarc: Stopping Eventarc Emulator {"metadata":{"emulator":{"name":"eventarc"},"message":"Stopping Eventarc Emulator"}}
+[info] i  tasks: Stopping Cloud Tasks Emulator {"metadata":{"emulator":{"name":"tasks"},"message":"Stopping Cloud Tasks Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[info] i  logging: Stopping Logging Emulator {"metadata":{"emulator":{"name":"logging"},"message":"Stopping Logging Emulator"}}
+[debug] [2024-11-15T10:00:20.784Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[debug] [2024-11-15T10:00:24.017Z] ----------------------------------------------------------------------
+[debug] [2024-11-15T10:00:24.018Z] Command:       /root/.nvm/versions/node/v18.17.0/bin/node /root/.nvm/versions/node/v18.17.0/bin/firebase emulators:start --only functions --debug
+[debug] [2024-11-15T10:00:24.019Z] CLI Version:   13.25.0
+[debug] [2024-11-15T10:00:24.019Z] Platform:      linux
+[debug] [2024-11-15T10:00:24.019Z] Node Version:  v18.17.0
+[debug] [2024-11-15T10:00:24.019Z] Time:          Fri Nov 15 2024 17:00:24 GMT+0700 (Indochina Time)
+[debug] [2024-11-15T10:00:24.019Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-15T10:00:24.087Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-15T10:00:24.088Z] > authorizing via signed-in user (williamho6000@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-11-15T10:00:24.092Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-11-15T10:00:24.096Z] [hub] writing locator at /tmp/hub-ebudy-test1.json
+[debug] [2024-11-15T10:00:24.106Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2024-11-15T10:00:24.109Z] defaultcredentials: writing to file /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json
+[debug] [2024-11-15T10:00:24.121Z] Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json"}}
+[debug] [2024-11-15T10:00:24.122Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T10:00:24.123Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T10:00:24.124Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig [none]
+[debug] [2024-11-15T10:00:24.485Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig 200
+[debug] [2024-11-15T10:00:24.486Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig {"projectId":"ebudy-test1","storageBucket":"ebudy-test1.firebasestorage.app"}
+[debug] [2024-11-15T10:00:24.518Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-11-15T10:00:24.519Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-11-15T10:00:24.519Z] Starting Emulator UI with command {"binary":"node","args":["/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false,"port":4000} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false,\"port\":4000}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-11-15T10:00:24.625Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[info] i  functions: Watching "/root/Projects/ebuddy-monorepo/apps/backend-repo" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/root/Projects/ebuddy-monorepo/apps/backend-repo\" for Cloud Functions..."}}
+[debug] [2024-11-15T10:00:24.785Z] Validating nodejs source
+[debug] [2024-11-15T10:00:25.316Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "core/app.ts",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "FUNCTIONS_EMULATOR=true firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  },
+  "type": "module"
+}
+[debug] [2024-11-15T10:00:25.319Z] Building nodejs source
+[debug] [2024-11-15T10:00:25.320Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T10:00:25.322Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T10:00:25.324Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[info] Serving at port 8105
+
+[error] /root/Projects/ebuddy-monorepo/apps/backend-repo/core/app.ts:1
+import { authMiddleware } from "../middleware/authMiddleware";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at loadModule (/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+
+[debug] [2024-11-15T10:00:25.478Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-11-15T10:00:25.501Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-11-15T10:00:41.552Z] Received signal SIGINT (Ctrl-C) 1
+[info]  
+[info] i  emulators: Received SIGINT (Ctrl-C) for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGINT (Ctrl-C) signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  ui: Stopping Emulator UI {"metadata":{"emulator":{"name":"ui"},"message":"Stopping Emulator UI"}}
+[warn] ⚠  Emulator UI has exited upon receiving signal: SIGINT 
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  eventarc: Stopping Eventarc Emulator {"metadata":{"emulator":{"name":"eventarc"},"message":"Stopping Eventarc Emulator"}}
+[info] i  tasks: Stopping Cloud Tasks Emulator {"metadata":{"emulator":{"name":"tasks"},"message":"Stopping Cloud Tasks Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[info] i  logging: Stopping Logging Emulator {"metadata":{"emulator":{"name":"logging"},"message":"Stopping Logging Emulator"}}
+[debug] [2024-11-15T10:00:41.563Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[debug] [2024-11-15T10:01:01.144Z] ----------------------------------------------------------------------
+[debug] [2024-11-15T10:01:01.146Z] Command:       /root/.nvm/versions/node/v18.17.0/bin/node /root/.nvm/versions/node/v18.17.0/bin/firebase emulators:start --only functions --debug
+[debug] [2024-11-15T10:01:01.146Z] CLI Version:   13.25.0
+[debug] [2024-11-15T10:01:01.146Z] Platform:      linux
+[debug] [2024-11-15T10:01:01.146Z] Node Version:  v18.17.0
+[debug] [2024-11-15T10:01:01.147Z] Time:          Fri Nov 15 2024 17:01:01 GMT+0700 (Indochina Time)
+[debug] [2024-11-15T10:01:01.147Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-15T10:01:01.217Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-15T10:01:01.218Z] > authorizing via signed-in user (williamho6000@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-11-15T10:01:01.222Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-11-15T10:01:01.227Z] [hub] writing locator at /tmp/hub-ebudy-test1.json
+[debug] [2024-11-15T10:01:01.237Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2024-11-15T10:01:01.240Z] defaultcredentials: writing to file /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json
+[debug] [2024-11-15T10:01:01.264Z] Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json"}}
+[debug] [2024-11-15T10:01:01.265Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T10:01:01.266Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T10:01:01.267Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig [none]
+[debug] [2024-11-15T10:01:01.748Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig 200
+[debug] [2024-11-15T10:01:01.748Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig {"projectId":"ebudy-test1","storageBucket":"ebudy-test1.firebasestorage.app"}
+[debug] [2024-11-15T10:01:01.791Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-11-15T10:01:01.791Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-11-15T10:01:01.791Z] Starting Emulator UI with command {"binary":"node","args":["/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false,"port":4000} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false,\"port\":4000}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-11-15T10:01:01.899Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[info] i  functions: Watching "/root/Projects/ebuddy-monorepo/apps/backend-repo" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/root/Projects/ebuddy-monorepo/apps/backend-repo\" for Cloud Functions..."}}
+[debug] [2024-11-15T10:01:02.027Z] Validating nodejs source
+[debug] [2024-11-15T10:01:04.096Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "core/app.ts",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "FUNCTIONS_EMULATOR=true firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
+[debug] [2024-11-15T10:01:04.099Z] Building nodejs source
+[debug] [2024-11-15T10:01:04.099Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T10:01:04.101Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T10:01:04.104Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[info] Serving at port 8114
+
+[error] /root/Projects/ebuddy-monorepo/apps/backend-repo/core/app.ts:1
+import { authMiddleware } from "../middleware/authMiddleware";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at loadModule (/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+
+[debug] [2024-11-15T10:01:04.261Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-11-15T10:01:04.287Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-11-15T10:02:22.114Z] File /root/Projects/ebuddy-monorepo/apps/backend-repo/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /root/Projects/ebuddy-monorepo/apps/backend-repo/package.json changed, reloading triggers"}}
+[debug] [2024-11-15T10:02:23.116Z] Validating nodejs source
+[debug] [2024-11-15T10:02:23.774Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/core/app.ts",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "tsc && firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: There was an error reading /package.json:
+
+ dist/core/app.ts does not exist, can't deploy Cloud Functions {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: There was an error reading /package.json:\n\n dist/core/app.ts does not exist, can't deploy Cloud Functions"}}
+[debug] [2024-11-15T10:02:24.691Z] File /root/Projects/ebuddy-monorepo/apps/backend-repo/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /root/Projects/ebuddy-monorepo/apps/backend-repo/package.json changed, reloading triggers"}}
+[debug] [2024-11-15T10:02:25.694Z] Validating nodejs source
+[debug] [2024-11-15T10:02:26.074Z] checkFunctionsSDKVersion encountered error: Unexpected end of JSON input {}
+[debug] [2024-11-15T10:02:26.075Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/core/app.js",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "tsc && firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
+[debug] [2024-11-15T10:02:26.077Z] Building nodejs source
+[debug] [2024-11-15T10:02:26.078Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T10:02:26.079Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T10:02:26.082Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[debug] [2024-11-15T10:02:26.103Z] Received signal SIGINT (Ctrl-C) 1
+[info]  
+[info] i  emulators: Received SIGINT (Ctrl-C) for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGINT (Ctrl-C) signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  ui: Stopping Emulator UI {"metadata":{"emulator":{"name":"ui"},"message":"Stopping Emulator UI"}}
+[warn] ⚠  Emulator UI has exited upon receiving signal: SIGINT 
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  eventarc: Stopping Eventarc Emulator {"metadata":{"emulator":{"name":"eventarc"},"message":"Stopping Eventarc Emulator"}}
+[info] i  tasks: Stopping Cloud Tasks Emulator {"metadata":{"emulator":{"name":"tasks"},"message":"Stopping Cloud Tasks Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[info] i  logging: Stopping Logging Emulator {"metadata":{"emulator":{"name":"logging"},"message":"Stopping Logging Emulator"}}
+[debug] [2024-11-15T10:02:26.118Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] Serving at port 8562
+
+[debug] [2024-11-15T10:02:55.102Z] ----------------------------------------------------------------------
+[debug] [2024-11-15T10:02:55.103Z] Command:       /root/.nvm/versions/node/v18.17.0/bin/node /root/.nvm/versions/node/v18.17.0/bin/firebase emulators:start --only functions --debug
+[debug] [2024-11-15T10:02:55.104Z] CLI Version:   13.25.0
+[debug] [2024-11-15T10:02:55.104Z] Platform:      linux
+[debug] [2024-11-15T10:02:55.104Z] Node Version:  v18.17.0
+[debug] [2024-11-15T10:02:55.104Z] Time:          Fri Nov 15 2024 17:02:55 GMT+0700 (Indochina Time)
+[debug] [2024-11-15T10:02:55.105Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-15T10:02:55.173Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-15T10:02:55.174Z] > authorizing via signed-in user (williamho6000@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-11-15T10:02:55.178Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-11-15T10:02:55.183Z] [hub] writing locator at /tmp/hub-ebudy-test1.json
+[debug] [2024-11-15T10:02:55.192Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2024-11-15T10:02:55.195Z] defaultcredentials: writing to file /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json
+[debug] [2024-11-15T10:02:55.210Z] Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json"}}
+[debug] [2024-11-15T10:02:55.211Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T10:02:55.212Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T10:02:55.213Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig [none]
+[debug] [2024-11-15T10:02:55.737Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig 200
+[debug] [2024-11-15T10:02:55.737Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig {"projectId":"ebudy-test1","storageBucket":"ebudy-test1.firebasestorage.app"}
+[debug] [2024-11-15T10:02:55.765Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-11-15T10:02:55.765Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-11-15T10:02:55.765Z] Starting Emulator UI with command {"binary":"node","args":["/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false,"port":4000} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false,\"port\":4000}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-11-15T10:02:55.872Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[info] i  functions: Watching "/root/Projects/ebuddy-monorepo/apps/backend-repo" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/root/Projects/ebuddy-monorepo/apps/backend-repo\" for Cloud Functions..."}}
+[debug] [2024-11-15T10:02:56.006Z] Validating nodejs source
+[debug] [2024-11-15T10:02:56.617Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/core/app.js",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "tsc && firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
+[debug] [2024-11-15T10:02:56.620Z] Building nodejs source
+[debug] [2024-11-15T10:02:56.620Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T10:02:56.622Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T10:02:56.625Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[info] Serving at port 8186
+
+[error] Error: Cannot find module '../serviceAccountKey.json'
+Require stack:
+- /root/Projects/ebuddy-monorepo/apps/backend-repo/dist/config/firebaseConfig.js
+- /root/Projects/ebuddy-monorepo/apps/backend-repo/dist/middleware/authMiddleware.js
+- /root/Projects/ebuddy-monorepo/apps/backend-repo/dist/core/app.js
+- /root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js
+- /root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/bin/firebase-functions.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
+    at Module._load (node:internal/modules/cjs/loader:922:27)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at Object.<anonymous> (/root/Projects/ebuddy-monorepo/apps/backend-repo/dist/config/firebaseConfig.js:9:24)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/root/Projects/ebuddy-monorepo/apps/backend-repo/dist/config/firebaseConfig.js',
+    '/root/Projects/ebuddy-monorepo/apps/backend-repo/dist/middleware/authMiddleware.js',
+    '/root/Projects/ebuddy-monorepo/apps/backend-repo/dist/core/app.js',
+    '/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js',
+    '/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/bin/firebase-functions.js'
+  ]
+}
+
+[debug] [2024-11-15T10:02:56.791Z] Got response code 400; body Failed to generate manifest from function source: Error: Cannot find module '../serviceAccountKey.json'
+Require stack:
+- /root/Projects/ebuddy-monorepo/apps/backend-repo/dist/config/firebaseConfig.js
+- /root/Projects/ebuddy-monorepo/apps/backend-repo/dist/middleware/authMiddleware.js
+- /root/Projects/ebuddy-monorepo/apps/backend-repo/dist/core/app.js
+- /root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js
+- /root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/bin/firebase-functions.js
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-11-15T10:02:56.826Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-11-15T10:03:29.517Z] File /root/Projects/ebuddy-monorepo/apps/backend-repo/tsconfig.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /root/Projects/ebuddy-monorepo/apps/backend-repo/tsconfig.json changed, reloading triggers"}}
+[debug] [2024-11-15T10:03:30.519Z] Validating nodejs source
+[debug] [2024-11-15T10:03:31.140Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/core/app.js",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "tsc && firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
+[debug] [2024-11-15T10:03:31.142Z] Building nodejs source
+[debug] [2024-11-15T10:03:31.142Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T10:03:31.143Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T10:03:31.146Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[info] Serving at port 8710
+
+[error] Error: Cannot find module '../serviceAccountKey.json'
+Require stack:
+- /root/Projects/ebuddy-monorepo/apps/backend-repo/dist/config/firebaseConfig.js
+- /root/Projects/ebuddy-monorepo/apps/backend-repo/dist/middleware/authMiddleware.js
+- /root/Projects/ebuddy-monorepo/apps/backend-repo/dist/core/app.js
+- /root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js
+- /root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/bin/firebase-functions.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
+    at Module._load (node:internal/modules/cjs/loader:922:27)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at Object.<anonymous> (/root/Projects/ebuddy-monorepo/apps/backend-repo/dist/config/firebaseConfig.js:9:24)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/root/Projects/ebuddy-monorepo/apps/backend-repo/dist/config/firebaseConfig.js',
+    '/root/Projects/ebuddy-monorepo/apps/backend-repo/dist/middleware/authMiddleware.js',
+    '/root/Projects/ebuddy-monorepo/apps/backend-repo/dist/core/app.js',
+    '/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js',
+    '/root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/bin/firebase-functions.js'
+  ]
+}
+
+[debug] [2024-11-15T10:03:31.310Z] Got response code 400; body Failed to generate manifest from function source: Error: Cannot find module '../serviceAccountKey.json'
+Require stack:
+- /root/Projects/ebuddy-monorepo/apps/backend-repo/dist/config/firebaseConfig.js
+- /root/Projects/ebuddy-monorepo/apps/backend-repo/dist/middleware/authMiddleware.js
+- /root/Projects/ebuddy-monorepo/apps/backend-repo/dist/core/app.js
+- /root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/runtime/loader.js
+- /root/Projects/ebuddy-monorepo/node_modules/firebase-functions/lib/bin/firebase-functions.js
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-11-15T10:03:31.615Z] Received signal SIGINT (Ctrl-C) 1
+[info]  
+[info] i  emulators: Received SIGINT (Ctrl-C) for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGINT (Ctrl-C) signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  ui: Stopping Emulator UI {"metadata":{"emulator":{"name":"ui"},"message":"Stopping Emulator UI"}}
+[warn] ⚠  Emulator UI has exited upon receiving signal: SIGINT 
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  eventarc: Stopping Eventarc Emulator {"metadata":{"emulator":{"name":"eventarc"},"message":"Stopping Eventarc Emulator"}}
+[info] i  tasks: Stopping Cloud Tasks Emulator {"metadata":{"emulator":{"name":"tasks"},"message":"Stopping Cloud Tasks Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[info] i  logging: Stopping Logging Emulator {"metadata":{"emulator":{"name":"logging"},"message":"Stopping Logging Emulator"}}
+[debug] [2024-11-15T10:03:31.627Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[debug] [2024-11-15T10:03:35.711Z] ----------------------------------------------------------------------
+[debug] [2024-11-15T10:03:35.713Z] Command:       /root/.nvm/versions/node/v18.17.0/bin/node /root/.nvm/versions/node/v18.17.0/bin/firebase emulators:start --only functions --debug
+[debug] [2024-11-15T10:03:35.713Z] CLI Version:   13.25.0
+[debug] [2024-11-15T10:03:35.713Z] Platform:      linux
+[debug] [2024-11-15T10:03:35.713Z] Node Version:  v18.17.0
+[debug] [2024-11-15T10:03:35.714Z] Time:          Fri Nov 15 2024 17:03:35 GMT+0700 (Indochina Time)
+[debug] [2024-11-15T10:03:35.714Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-15T10:03:35.784Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-15T10:03:35.785Z] > authorizing via signed-in user (williamho6000@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-11-15T10:03:35.789Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-11-15T10:03:35.793Z] [hub] writing locator at /tmp/hub-ebudy-test1.json
+[debug] [2024-11-15T10:03:35.803Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2024-11-15T10:03:35.806Z] defaultcredentials: writing to file /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json
+[debug] [2024-11-15T10:03:35.816Z] Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json"}}
+[debug] [2024-11-15T10:03:35.817Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T10:03:35.818Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T10:03:35.819Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig [none]
+[debug] [2024-11-15T10:03:36.232Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig 200
+[debug] [2024-11-15T10:03:36.233Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig {"projectId":"ebudy-test1","storageBucket":"ebudy-test1.firebasestorage.app"}
+[debug] [2024-11-15T10:03:36.288Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-11-15T10:03:36.288Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-11-15T10:03:36.289Z] Starting Emulator UI with command {"binary":"node","args":["/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false,"port":4000} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false,\"port\":4000}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-11-15T10:03:36.395Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[info] i  functions: Watching "/root/Projects/ebuddy-monorepo/apps/backend-repo" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/root/Projects/ebuddy-monorepo/apps/backend-repo\" for Cloud Functions..."}}
+[debug] [2024-11-15T10:03:36.541Z] Validating nodejs source
+[debug] [2024-11-15T10:03:37.170Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/core/app.js",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "tsc && firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
+[debug] [2024-11-15T10:03:37.173Z] Building nodejs source
+[debug] [2024-11-15T10:03:37.173Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T10:03:37.175Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T10:03:37.178Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[info] Serving at port 8700
+
+[debug] [2024-11-15T10:03:40.787Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] ✔  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/ebudy-test1/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/ebudy-test1/us-central1/api)."}}
+[debug] [2024-11-15T10:03:40.827Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-11-15T10:04:20.555Z] Functions emulator received unknown request at path /users/fetch-user-data/a
+[debug] [2024-11-15T10:04:57.335Z] Functions emulator received unknown request at path /
+[debug] [2024-11-15T10:05:52.790Z] Functions emulator received unknown request at path /ebuddy-test1/us-central1/users/fetch-user-data/a
+[debug] [2024-11-15T10:06:41.130Z] File /root/Projects/ebuddy-monorepo/apps/backend-repo/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /root/Projects/ebuddy-monorepo/apps/backend-repo/package.json changed, reloading triggers"}}
+[debug] [2024-11-15T10:06:42.131Z] Validating nodejs source
+[debug] [2024-11-15T10:06:42.799Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/core/app.js",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "FUNCTIONS_EMULATOR=true tsc && firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
+[debug] [2024-11-15T10:06:42.802Z] Building nodejs source
+[debug] [2024-11-15T10:06:42.802Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T10:06:42.803Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T10:06:42.806Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[info] Serving at port 8328
+
+[debug] [2024-11-15T10:06:43.165Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-11-15T10:06:52.418Z] Received signal SIGINT (Ctrl-C) 1
+[info]  
+[info] i  emulators: Received SIGINT (Ctrl-C) for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGINT (Ctrl-C) signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  ui: Stopping Emulator UI {"metadata":{"emulator":{"name":"ui"},"message":"Stopping Emulator UI"}}
+[warn] ⚠  Emulator UI has exited upon receiving signal: SIGINT 
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  eventarc: Stopping Eventarc Emulator {"metadata":{"emulator":{"name":"eventarc"},"message":"Stopping Eventarc Emulator"}}
+[info] i  tasks: Stopping Cloud Tasks Emulator {"metadata":{"emulator":{"name":"tasks"},"message":"Stopping Cloud Tasks Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[info] i  logging: Stopping Logging Emulator {"metadata":{"emulator":{"name":"logging"},"message":"Stopping Logging Emulator"}}
+[debug] [2024-11-15T10:06:52.428Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[debug] [2024-11-15T10:06:56.952Z] ----------------------------------------------------------------------
+[debug] [2024-11-15T10:06:56.954Z] Command:       /root/.nvm/versions/node/v18.17.0/bin/node /root/.nvm/versions/node/v18.17.0/bin/firebase emulators:start --only functions --debug
+[debug] [2024-11-15T10:06:56.954Z] CLI Version:   13.25.0
+[debug] [2024-11-15T10:06:56.954Z] Platform:      linux
+[debug] [2024-11-15T10:06:56.954Z] Node Version:  v18.17.0
+[debug] [2024-11-15T10:06:56.955Z] Time:          Fri Nov 15 2024 17:06:56 GMT+0700 (Indochina Time)
+[debug] [2024-11-15T10:06:56.955Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-15T10:06:57.024Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-15T10:06:57.025Z] > authorizing via signed-in user (williamho6000@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-11-15T10:06:57.030Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-11-15T10:06:57.034Z] [hub] writing locator at /tmp/hub-ebudy-test1.json
+[debug] [2024-11-15T10:06:57.044Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2024-11-15T10:06:57.047Z] defaultcredentials: writing to file /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json
+[debug] [2024-11-15T10:06:57.064Z] Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json"}}
+[debug] [2024-11-15T10:06:57.065Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T10:06:57.065Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T10:06:57.066Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig [none]
+[debug] [2024-11-15T10:06:57.487Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig 200
+[debug] [2024-11-15T10:06:57.488Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig {"projectId":"ebudy-test1","storageBucket":"ebudy-test1.firebasestorage.app"}
+[debug] [2024-11-15T10:06:57.509Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-11-15T10:06:57.510Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-11-15T10:06:57.510Z] Starting Emulator UI with command {"binary":"node","args":["/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false,"port":4000} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false,\"port\":4000}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-11-15T10:06:57.616Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[info] i  functions: Watching "/root/Projects/ebuddy-monorepo/apps/backend-repo" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/root/Projects/ebuddy-monorepo/apps/backend-repo\" for Cloud Functions..."}}
+[debug] [2024-11-15T10:06:57.778Z] Validating nodejs source
+[debug] [2024-11-15T10:06:58.405Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/core/app.js",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "FUNCTIONS_EMULATOR=true tsc && firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
+[debug] [2024-11-15T10:06:58.407Z] Building nodejs source
+[debug] [2024-11-15T10:06:58.408Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T10:06:58.410Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T10:06:58.413Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[info] Serving at port 8011
+
+[debug] [2024-11-15T10:06:58.776Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] ✔  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/ebudy-test1/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/ebudy-test1/us-central1/api)."}}
+[debug] [2024-11-15T10:06:58.830Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-11-15T10:07:07.211Z] Functions emulator received unknown request at path /
+[debug] [2024-11-15T10:07:07.225Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2024-11-15T10:07:10.775Z] Functions emulator received unknown request at path /ebuddy-test1/us-central1/users/fetch-user-data/a
+[debug] [2024-11-15T10:08:57.140Z] File /root/Projects/ebuddy-monorepo/apps/backend-repo/core/app.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /root/Projects/ebuddy-monorepo/apps/backend-repo/core/app.ts changed, reloading triggers"}}
+[debug] [2024-11-15T10:08:58.141Z] Validating nodejs source
+[debug] [2024-11-15T10:08:58.762Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/core/app.js",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "FUNCTIONS_EMULATOR=true tsc && firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
+[debug] [2024-11-15T10:08:58.764Z] Building nodejs source
+[debug] [2024-11-15T10:08:58.765Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T10:08:58.767Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T10:08:58.769Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[info] Serving at port 8636
+
+[debug] [2024-11-15T10:08:59.131Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-11-15T10:08:59.716Z] Received signal SIGINT (Ctrl-C) 1
+[info]  
+[info] i  emulators: Received SIGINT (Ctrl-C) for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGINT (Ctrl-C) signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  ui: Stopping Emulator UI {"metadata":{"emulator":{"name":"ui"},"message":"Stopping Emulator UI"}}
+[warn] ⚠  Emulator UI has exited upon receiving signal: SIGINT 
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  eventarc: Stopping Eventarc Emulator {"metadata":{"emulator":{"name":"eventarc"},"message":"Stopping Eventarc Emulator"}}
+[info] i  tasks: Stopping Cloud Tasks Emulator {"metadata":{"emulator":{"name":"tasks"},"message":"Stopping Cloud Tasks Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[info] i  logging: Stopping Logging Emulator {"metadata":{"emulator":{"name":"logging"},"message":"Stopping Logging Emulator"}}
+[debug] [2024-11-15T10:08:59.725Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[debug] [2024-11-15T10:09:03.956Z] ----------------------------------------------------------------------
+[debug] [2024-11-15T10:09:03.958Z] Command:       /root/.nvm/versions/node/v18.17.0/bin/node /root/.nvm/versions/node/v18.17.0/bin/firebase emulators:start --only functions --debug
+[debug] [2024-11-15T10:09:03.958Z] CLI Version:   13.25.0
+[debug] [2024-11-15T10:09:03.958Z] Platform:      linux
+[debug] [2024-11-15T10:09:03.958Z] Node Version:  v18.17.0
+[debug] [2024-11-15T10:09:03.959Z] Time:          Fri Nov 15 2024 17:09:03 GMT+0700 (Indochina Time)
+[debug] [2024-11-15T10:09:03.959Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-15T10:09:04.027Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-15T10:09:04.028Z] > authorizing via signed-in user (williamho6000@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-11-15T10:09:04.032Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-11-15T10:09:04.037Z] [hub] writing locator at /tmp/hub-ebudy-test1.json
+[debug] [2024-11-15T10:09:04.047Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2024-11-15T10:09:04.050Z] defaultcredentials: writing to file /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json
+[debug] [2024-11-15T10:09:04.052Z] Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /root/.config/firebase/williamho6000_gmail_com_application_default_credentials.json"}}
+[debug] [2024-11-15T10:09:04.053Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T10:09:04.054Z] Checked if tokens are valid: true, expires at: 1731666634806
+[debug] [2024-11-15T10:09:04.054Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig [none]
+[debug] [2024-11-15T10:09:04.462Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig 200
+[debug] [2024-11-15T10:09:04.463Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ebudy-test1/adminSdkConfig {"projectId":"ebudy-test1","storageBucket":"ebudy-test1.firebasestorage.app"}
+[debug] [2024-11-15T10:09:04.503Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-11-15T10:09:04.503Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-11-15T10:09:04.504Z] Starting Emulator UI with command {"binary":"node","args":["/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false,"port":4000} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/root/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false,\"port\":4000}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-11-15T10:09:04.609Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[info] i  functions: Watching "/root/Projects/ebuddy-monorepo/apps/backend-repo" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/root/Projects/ebuddy-monorepo/apps/backend-repo\" for Cloud Functions..."}}
+[debug] [2024-11-15T10:09:04.769Z] Validating nodejs source
+[debug] [2024-11-15T10:09:05.354Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/core/app.js",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "FUNCTIONS_EMULATOR=true tsc && firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
+[debug] [2024-11-15T10:09:05.357Z] Building nodejs source
+[debug] [2024-11-15T10:09:05.357Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T10:09:05.359Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T10:09:05.362Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[info] Serving at port 8885
+
+[debug] [2024-11-15T10:09:05.721Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] ✔  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/ebudy-test1/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/ebudy-test1/us-central1/api)."}}
+[debug] [2024-11-15T10:09:05.777Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-11-15T10:09:19.465Z] Functions emulator received unknown request at path /
+[debug] [2024-11-15T10:09:30.941Z] [work-queue] {"queuedWork":["/ebudy-test1/us-central1/api-2024-11-15T10:09:30.940Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-15T10:09:30.941Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ebudy-test1/us-central1/api-2024-11-15T10:09:30.940Z"],"workRunningCount":1}
+[debug] [2024-11-15T10:09:30.942Z] Accepted request GET /ebudy-test1/us-central1/api --> us-central1-api
+[debug] [2024-11-15T10:09:30.944Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-11-15T10:09:30.945Z] [functions] Got req.url=/ebudy-test1/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ebudy-test1/us-central1/api, mapping to path=/"}}
+[debug] [2024-11-15T10:09:30.967Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2024-11-15T10:09:30.968Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed as a dependency. To fix this, run "npm install --save firebase-admin" in your functions directory. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"The Cloud Functions emulator requires the module \"firebase-admin\" to be installed as a dependency. To fix this, run \"npm install --save firebase-admin\" in your functions directory."}}
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Your functions could not be parsed due to an issue with your node_modules (see above)"}}
+[debug] [2024-11-15T10:09:32.154Z] [runtime-status] [4662] Functions runtime initialized. {"cwd":"/root/Projects/ebuddy-monorepo/apps/backend-repo","node_version":"18.17.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4662] Functions runtime initialized. {\"cwd\":\"/root/Projects/ebuddy-monorepo/apps/backend-repo\",\"node_version\":\"18.17.0\"}"}}
+[debug] [2024-11-15T10:09:32.155Z] [runtime-status] [4662] Listening to port: /tmp/fire_emu_60b5b597f6148ee9.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4662] Listening to port: /tmp/fire_emu_60b5b597f6148ee9.sock"}}
+[debug] [2024-11-15T10:09:32.185Z] [worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: IDLE"}}
+[debug] [2024-11-15T10:09:32.185Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-11-15T10:09:32.186Z] [worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: BUSY"}}
+[debug] [2024-11-15T10:09:32.192Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 5.6774ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 5.6774ms"}}
+[debug] [2024-11-15T10:09:32.192Z] [worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: IDLE"}}
+[debug] [2024-11-15T10:09:32.193Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-11-15T10:09:32.193Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-11-15T10:09:32.193Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-15T10:09:32.211Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2024-11-15T10:09:53.831Z] [work-queue] {"queuedWork":["/ebudy-test1/us-central1/api/-2024-11-15T10:09:53.831Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-15T10:09:53.831Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ebudy-test1/us-central1/api/-2024-11-15T10:09:53.831Z"],"workRunningCount":1}
+[debug] [2024-11-15T10:09:53.832Z] Accepted request GET /ebudy-test1/us-central1/api/ --> us-central1-api
+[debug] [2024-11-15T10:09:53.833Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-11-15T10:09:53.834Z] [functions] Got req.url=/ebudy-test1/us-central1/api/, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ebudy-test1/us-central1/api/, mapping to path=/"}}
+[debug] [2024-11-15T10:09:53.834Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-11-15T10:09:53.835Z] [worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: BUSY"}}
+[debug] [2024-11-15T10:09:53.838Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 3.6565ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 3.6565ms"}}
+[debug] [2024-11-15T10:09:53.839Z] [worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: IDLE"}}
+[debug] [2024-11-15T10:09:53.839Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-11-15T10:09:53.840Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-11-15T10:09:53.840Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-15T10:10:17.409Z] File /root/Projects/ebuddy-monorepo/apps/backend-repo/core/app.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /root/Projects/ebuddy-monorepo/apps/backend-repo/core/app.ts changed, reloading triggers"}}
+[debug] [2024-11-15T10:10:18.412Z] Validating nodejs source
+[debug] [2024-11-15T10:10:19.004Z] > [functions] package.json contents: {
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/core/app.js",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "FUNCTIONS_EMULATOR=true tsc && firebase emulators:start --only functions --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^11.0.1",
+    "firebase-functions": "6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "uuid4": "^2.0.3",
+    "shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
+[debug] [2024-11-15T10:10:19.006Z] Building nodejs source
+[debug] [2024-11-15T10:10:19.007Z] Failed to find version of module node: reached end of search path /root/Projects/ebuddy-monorepo/apps/backend-repo/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-11-15T10:10:19.010Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-15T10:10:19.012Z] Found firebase-functions binary at '/root/Projects/ebuddy-monorepo/node_modules/.bin/firebase-functions'
+[info] Serving at port 8873
+
+[debug] [2024-11-15T10:10:19.376Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-11-15T10:10:19.411Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2024-11-15T10:10:19.412Z] [worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: FINISHING"}}
+[debug] [2024-11-15T10:10:19.414Z] [worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: exited"}}
+[debug] [2024-11-15T10:10:19.414Z] [worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-3a87dcb1-b874-4f36-a562-8f0ff9f001e2]: FINISHED"}}
+[debug] [2024-11-15T10:10:27.596Z] [work-queue] {"queuedWork":["/ebudy-test1/us-central1/api/users/fetch-user-data/a-2024-11-15T10:10:27.596Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-15T10:10:27.597Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ebudy-test1/us-central1/api/users/fetch-user-data/a-2024-11-15T10:10:27.596Z"],"workRunningCount":1}
+[debug] [2024-11-15T10:10:27.597Z] Accepted request GET /ebudy-test1/us-central1/api/users/fetch-user-data/a --> us-central1-api
+[debug] [2024-11-15T10:10:27.599Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-11-15T10:10:27.599Z] [functions] Got req.url=/ebudy-test1/us-central1/api/users/fetch-user-data/a, mapping to path=/users/fetch-user-data/a {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ebudy-test1/us-central1/api/users/fetch-user-data/a, mapping to path=/users/fetch-user-data/a"}}
+[debug] [2024-11-15T10:10:27.599Z] [worker-pool] Cleaned up workers for us-central1-api: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-api: 1 --> 0"}}
+[debug] [2024-11-15T10:10:27.619Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2024-11-15T10:10:27.620Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed as a dependency. To fix this, run "npm install --save firebase-admin" in your functions directory. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"The Cloud Functions emulator requires the module \"firebase-admin\" to be installed as a dependency. To fix this, run \"npm install --save firebase-admin\" in your functions directory."}}
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Your functions could not be parsed due to an issue with your node_modules (see above)"}}
+[debug] [2024-11-15T10:10:28.765Z] [runtime-status] [4716] Functions runtime initialized. {"cwd":"/root/Projects/ebuddy-monorepo/apps/backend-repo","node_version":"18.17.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4716] Functions runtime initialized. {\"cwd\":\"/root/Projects/ebuddy-monorepo/apps/backend-repo\",\"node_version\":\"18.17.0\"}"}}
+[debug] [2024-11-15T10:10:28.765Z] [runtime-status] [4716] Listening to port: /tmp/fire_emu_93de67550e9b2d6a.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4716] Listening to port: /tmp/fire_emu_93de67550e9b2d6a.sock"}}
+[debug] [2024-11-15T10:10:28.861Z] [worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: IDLE"}}
+[debug] [2024-11-15T10:10:28.861Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-11-15T10:10:28.862Z] [worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: BUSY"}}
+[debug] [2024-11-15T10:10:28.866Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 4.9166ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 4.9166ms"}}
+[debug] [2024-11-15T10:10:28.867Z] [worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: IDLE"}}
+[debug] [2024-11-15T10:10:28.868Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-11-15T10:10:28.868Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-11-15T10:10:28.868Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-15T10:10:37.525Z] [work-queue] {"queuedWork":["/ebudy-test1/us-central1/api/users/fetch-user-data/a-2024-11-15T10:10:37.525Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-15T10:10:37.526Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ebudy-test1/us-central1/api/users/fetch-user-data/a-2024-11-15T10:10:37.525Z"],"workRunningCount":1}
+[debug] [2024-11-15T10:10:37.526Z] Accepted request GET /ebudy-test1/us-central1/api/users/fetch-user-data/a --> us-central1-api
+[debug] [2024-11-15T10:10:37.528Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-11-15T10:10:37.528Z] [functions] Got req.url=/ebudy-test1/us-central1/api/users/fetch-user-data/a, mapping to path=/users/fetch-user-data/a {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ebudy-test1/us-central1/api/users/fetch-user-data/a, mapping to path=/users/fetch-user-data/a"}}
+[debug] [2024-11-15T10:10:37.528Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-11-15T10:10:37.529Z] [worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: BUSY"}}
+[debug] [2024-11-15T10:10:37.533Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 5.0531ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 5.0531ms"}}
+[debug] [2024-11-15T10:10:37.534Z] [worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: IDLE"}}
+[debug] [2024-11-15T10:10:37.534Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-11-15T10:10:37.535Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-11-15T10:10:37.535Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-15T10:12:05.971Z] [work-queue] {"queuedWork":["/ebudy-test1/us-central1/api/users/fetch-user-data/8zlazhFtJDiiMENDyWRY-2024-11-15T10:12:05.971Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-15T10:12:05.971Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ebudy-test1/us-central1/api/users/fetch-user-data/8zlazhFtJDiiMENDyWRY-2024-11-15T10:12:05.971Z"],"workRunningCount":1}
+[debug] [2024-11-15T10:12:05.972Z] Accepted request OPTIONS /ebudy-test1/us-central1/api/users/fetch-user-data/8zlazhFtJDiiMENDyWRY --> us-central1-api
+[debug] [2024-11-15T10:12:05.973Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-11-15T10:12:05.973Z] [functions] Got req.url=/ebudy-test1/us-central1/api/users/fetch-user-data/8zlazhFtJDiiMENDyWRY, mapping to path=/users/fetch-user-data/8zlazhFtJDiiMENDyWRY {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ebudy-test1/us-central1/api/users/fetch-user-data/8zlazhFtJDiiMENDyWRY, mapping to path=/users/fetch-user-data/8zlazhFtJDiiMENDyWRY"}}
+[debug] [2024-11-15T10:12:05.974Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-11-15T10:12:05.974Z] [worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: BUSY"}}
+[debug] [2024-11-15T10:12:05.977Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 3.289ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 3.289ms"}}
+[debug] [2024-11-15T10:12:05.978Z] [worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: IDLE"}}
+[debug] [2024-11-15T10:12:05.978Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-11-15T10:12:05.978Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-11-15T10:12:05.979Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-15T10:12:05.980Z] [work-queue] {"queuedWork":["/ebudy-test1/us-central1/api/users/fetch-user-data/8zlazhFtJDiiMENDyWRY-2024-11-15T10:12:05.980Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-15T10:12:05.980Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ebudy-test1/us-central1/api/users/fetch-user-data/8zlazhFtJDiiMENDyWRY-2024-11-15T10:12:05.980Z"],"workRunningCount":1}
+[debug] [2024-11-15T10:12:05.980Z] Accepted request GET /ebudy-test1/us-central1/api/users/fetch-user-data/8zlazhFtJDiiMENDyWRY --> us-central1-api
+[debug] [2024-11-15T10:12:05.981Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-11-15T10:12:05.982Z] [functions] Got req.url=/ebudy-test1/us-central1/api/users/fetch-user-data/8zlazhFtJDiiMENDyWRY, mapping to path=/users/fetch-user-data/8zlazhFtJDiiMENDyWRY {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ebudy-test1/us-central1/api/users/fetch-user-data/8zlazhFtJDiiMENDyWRY, mapping to path=/users/fetch-user-data/8zlazhFtJDiiMENDyWRY"}}
+[debug] [2024-11-15T10:12:05.982Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-11-15T10:12:05.983Z] [worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: BUSY"}}
+[info] >  { name: 'hai222', address: 'street bc' } {"user":"{ name: 'hai222', address: 'street bc' }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m { name: 'hai222', address: 'street bc' }"}}
+[debug] [2024-11-15T10:12:08.934Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 2951.304ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 2951.304ms"}}
+[debug] [2024-11-15T10:12:08.935Z] [worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: IDLE"}}
+[debug] [2024-11-15T10:12:08.935Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-11-15T10:12:08.935Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-11-15T10:12:08.935Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-15T10:12:17.817Z] Received signal SIGINT (Ctrl-C) 1
+[info]  
+[info] i  emulators: Received SIGINT (Ctrl-C) for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGINT (Ctrl-C) signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  ui: Stopping Emulator UI {"metadata":{"emulator":{"name":"ui"},"message":"Stopping Emulator UI"}}
+[warn] ⚠  Emulator UI has exited upon receiving signal: SIGINT 
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  eventarc: Stopping Eventarc Emulator {"metadata":{"emulator":{"name":"eventarc"},"message":"Stopping Eventarc Emulator"}}
+[info] i  tasks: Stopping Cloud Tasks Emulator {"metadata":{"emulator":{"name":"tasks"},"message":"Stopping Cloud Tasks Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[debug] [2024-11-15T10:12:17.825Z] [worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: exited"}}
+[debug] [2024-11-15T10:12:17.825Z] [worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b4719d4c-f736-4bc7-bbb2-f49e041b689f]: FINISHED"}}
+[info] i  logging: Stopping Logging Emulator {"metadata":{"emulator":{"name":"logging"},"message":"Stopping Logging Emulator"}}
+[debug] [2024-11-15T10:12:17.829Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
